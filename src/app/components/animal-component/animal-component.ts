@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-animal-component',
@@ -8,6 +10,8 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './animal-component.css',
 })
 export class AnimalComponent {
-titulo="Mi Titulo"
+animalList: any = [];
+
+constructor(private animalService: AnimalService, private toastr: ToastrService){}
 
 }
